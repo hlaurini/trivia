@@ -1,4 +1,4 @@
-Tienda de Aplicaciones TAC REST API Service
+TRIVIA GAME TAC REST API Service
 ===========================================
 
 Quick start
