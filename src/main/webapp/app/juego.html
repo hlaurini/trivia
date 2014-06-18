@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/general.css" rel="stylesheet" type="text/css">
+    <script src="lib/angular/angular.min.js"> </script>
+    <script src="js/controllers.js"> </script>
+  </head>
+
+  <body ng-app="indexApp" ng-controller="Preguntas">
+  
+    <h1 align="center">Pregunta</h1>
+    <h3 align="center">¿{{pregunta.pregunta}}?</h3>
+
+    <p>Presioná el botón del color de la respuesta que elijas</p>
+
+    <div ng-repeat='opcion in pregunta.opciones'>
+
+      <div class="preguntas" ng-switch="$index == pregunta.correcta">
+        <a href="ok.html" class="btn btn-primary {{'btn-color'+$index}}" ng-switch-when="true">{{opcion}}</a>
+        <a href="fail.html" class="btn btn-primary {{'btn-color'+$index}}" ng-switch-when="false">{{opcion}}</a>
+      </div>
+
+    </div>
+
+  </body>
+
+</html>

@@ -1,60 +1,13 @@
-'use strict';
+var indexApp = angular.module('indexApp', [])
 
-/* Controllers */
+indexApp.controller('Preguntas', ['$scope', '$http',
+  function ($scope, $http) {
+    $http.get('preguntas.json').success(function(data) {
 
-var marketControllers = angular.module('marketControllers', []);
+      var preguntas = data.preguntas,
+          random = Math.round(Math.random() * (preguntas.length - 1))
 
-
-/**
- * Message controller
- */
-marketControllers.controller('MessageCtrl', ['$scope', '$rootScope','messageService',
-function ($scope, $rootScope, messageService) {
-	
-	$scope.close = function() {
-		messageService.clear();
-	};
-}]);
-
-
-
-/**
- * List controller
- */
-marketControllers.controller('ListCrtl', ['$scope', '$http',
-function ($scope, $http) {
-
-	$http.get('/application/all/').success(function(data) {
-	      $scope.apps = data;
-	});
- }]);
-
-
-
-/**
- * View controller
- */
-marketControllers.controller('ViewCrtl', ['$scope', '$routeParams', '$http', '$location', 'messageService',
-
-function ($scope, $routeParams, $http, $location, messageService) {
-
-	  $http.get('/application/get/'+ $routeParams.appid).
-	  	success(function(data) {
-	  		$scope.app = data;
-	  	}).
-	  	error(function() {
-	  		$location.path('/');
-	  		messageService.setMessage('error', 'La aplicacion que se ha querido acceder no existe');
-	  	});
-	  
-	  
-//	  $scope.scrollTo = function(id) {
-//		  
-//		  $('#nav li').removeClass('active');
-//		  $('#nav #li-'+id).addClass('active');
-//		  window.scrollTo(0, $('#'+id).position().top - 50);
-//	  };
-	  
-}]);
-
-
+      $scope.pregunta = preguntas[random]
+    })
+  }]
+)

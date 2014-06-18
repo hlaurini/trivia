@@ -1,0 +1,148 @@
+{
+	"_comment": "Respuesta correcta: indice de 0(cero) a 3(tres)",
+	"preguntas": [
+		{
+			"pregunta": "Cuál de las siguientes enfermedades ataca al hígado",
+			"opciones": [
+				"Hepatitis",
+				"Diabetes",
+				"Artrósis",
+				"Cifoescoliosis"
+			],
+			"correcta": 0
+		},
+
+		{
+			"pregunta": "Cuál es la función principal del intestino grueso",
+			"opciones": [
+				"La absorción de nutrientes",
+				"La digestión mecánica de los alimentos",
+				"La absorción de agua",
+				"La digestión química de alimentos"
+			],
+			"correcta": 2
+		},
+
+		{
+			"pregunta": "Qué hay en la boca del estómago",
+			"opciones": [
+				"El píloro",
+				"El cardías",
+				"Los ácidos gástricos",
+				"El epilón mayor"
+			],
+			"correcta": 1
+		},
+
+		{
+			"pregunta": "Qué cambio de estado ocurre en la sublimación",
+			"opciones": [
+				"De sólido a líquido",
+				"De sólido a gaseoso",
+				"De gaseoso a líquido",
+				"De líquido a solido"
+			],
+			"correcta": 1
+		},
+
+		{
+			"pregunta": "Qué órgano del cuerpo humano produce la bilis",
+			"opciones": [
+				"Hígado",
+				"Páncreas",
+				"Intestino delgado",
+				"Riñon"
+			],
+			"correcta": 0
+		},
+
+		{
+			"pregunta": "De qué color es la sange de los peces",
+			"opciones": [
+				"Verde oscuro",
+				"Marrón oscuro",
+				"Rojo",
+				"Azul"
+			],
+			"correcta": 2
+		},
+
+		{
+			"pregunta": "Qué estudia la ictiología",
+			"opciones": [
+				"Los insectos",
+				"Las erupciones cutáneas",
+				"Las rocas",
+				"Los peces"
+			],
+			"correcta": 3
+		},
+
+		{
+			"pregunta": "Cuál es el cérvido de mayor tamaño",
+			"opciones": [
+				"El alce",
+				"El corzo",
+				"El ciervo",
+				"El pudu"
+			],
+			"correcta": 0
+		},
+
+		{
+			"pregunta": "Quién vivía en el 221B de Backer Street",
+			"opciones": [
+				"Sherlock Holmes",
+				"Truman Capote",
+				"Philip Marlowe",
+				"Arthur Conan Doyle"
+			],
+			"correcta": 0
+		},
+
+		{
+			"pregunta": "Quién escribió 'El túnel'",
+			"opciones": [
+				"Ernesto Sabato",
+				"Gabrial García Márquez",
+				"Mario Vargas Llosa",
+				"Jorge Luis Borges"
+			],
+			"correcta": 0
+		},
+
+		{
+			"pregunta": "Quién es el autor de 'El retrato de Dorian Gray'",
+			"opciones": [
+				"Oscar Wilde",
+				"Charles Dickens",
+				"Arthur Conan Doyle",
+				"George Orwell"
+			],
+			"correcta": 0
+		},
+
+		{
+			"pregunta": "Quién es el autor de 'Moby Dick'",
+			"opciones": [
+				"Herman Melville",
+				"Henry David Thoreau",
+				"Ralph Waldo Emerson",
+				"Henry James"
+			],
+			"correcta": 0
+		},
+
+		{
+			"pregunta": "Cómo se llama el protagonista de 'El código Da Vinci' de Dan Brown",
+			"opciones": [
+				"Robert Langdom",
+				"Tom Hanks",
+				"Mr. White",
+				"Robert Black"
+			],
+			"correcta": 0
+		}
+
+	]
+}
