@@ -1,0 +1,15 @@
+
+<h1>Pregunta para {{player.name}}</h1>
+<h2>Te quedan {{player.lifes}} vidas</h2>
+<h3>¿{{pregunta.pregunta}}?</h3>
+
+<p>Presioná el botón del color de la respuesta que elijas</p>
+
+<div ng-repeat='opcion in pregunta.opciones'>
+
+	<div class="preguntas" ng-switch="$index == pregunta.correcta">
+	  <a ng-href="#/game/ok" class="btn {{'btn-color'+$index}}" ng-switch-when="true">{{opcion}}</a>
+	  <a ng-href="#/game/fail" class="btn {{'btn-color'+$index}}" ng-switch-when="false">{{opcion}}</a>
+	</div>
+
+</div>

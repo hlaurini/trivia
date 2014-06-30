@@ -1,6 +1,25 @@
-var indexApp = angular.module('indexApp', []),
-    
-players  = [{
+'use strict';
+
+/* Controllers */
+
+var triviaControllers = angular.module('triviaControllers', []);
+
+
+/**
+ * Message controller
+ */
+triviaControllers.controller('MessageCtrl', ['$scope', '$rootScope','messageService',
+function ($scope, $rootScope, messageService) {
+	
+	$scope.close = function() {
+		messageService.clear();
+	};
+}]);
+
+
+
+
+var players  = [{
     'name': 'Player1',
     'lifes': 3
   },
@@ -11,14 +30,8 @@ players  = [{
 ]
 
 
-indexApp.controller('Splash', ['$scope',
-  function ($scope) {
-    // localStorage.setItem('turno', 0);
-  }]
-)
-
-indexApp.controller('Preguntas', ['$scope', '$http',
-  function ($scope, $http) {
+triviaControllers.controller('Preguntas', ['$scope', '$http', 'turnoService',
+  function ($scope, $http, turnoService) {
     $http.get('preguntas.json').success(function(data) {
 
       var preguntas = data.preguntas,
@@ -26,13 +39,26 @@ indexApp.controller('Preguntas', ['$scope', '$http',
 
       $scope.pregunta = preguntas[random]
       
-      $scope.player = players[0]
+      $scope.player = players[turnoService.getTurno()]
     })
   }]
 )
 
-indexApp.controller('Perdiste', ['$scope',
-  function ($scope) {
-    //turno = turno + 1 % players.length
+triviaControllers.controller('Splash', ['$scope', 'turnoService',
+  function ($scope, turnoService) {
+  }]
+)
+
+triviaControllers.controller('Ganaste', ['$scope', 'turnoService',
+  function ($scope, turnoService) {
+  }]
+)
+
+triviaControllers.controller('Perdiste', ['$scope', 'turnoService',
+  function ($scope, turnoService) {
+  	// Se resta una vida
+  	players[turnoService.getTurno()].lifes--
+  	// Le cede el turno al otro jugador
+  	turnoService.nextTurno(players.length)
   }]
 )
